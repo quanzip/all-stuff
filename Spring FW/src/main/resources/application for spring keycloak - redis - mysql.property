@@ -1,0 +1,72 @@
+# ===============================
+# SPRING
+# ===============================
+spring.output.ansi.console-available=true
+spring.application.name=IoT Hoa Phat Back-end
+spring.application.formatted-version=1.0 RELEASE
+spring.banner.location=banner.txt
+
+spring.servlet.multipart.max-file-size=100MB
+spring.servlet.multipart.max-request-size=100MB
+
+# ===============================
+# LOG
+# ===============================
+logging.file.name=../logs-backend/app.log
+logging.level.=info
+
+# ===============================
+# SERVER
+# ===============================
+server.port=9789
+
+
+# ===============================
+# DATABASE
+# ===============================
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.url=jdbc:postgresql://10.61.184.50:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=postgres@123
+
+spring.jpa.show-sql=false
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+
+# ===============================
+# REDIS
+# ===============================
+spring.redis.cluster.nodes=10.60.117.198:9002,10.60.117.198:9003,10.60.117.198:9004,10.60.117.198:9005,10.60.117.198:9006,10.60.117.198:9007
+spring.redis.cluster.max-redirects=30
+spring.data.redis.repositories.enabled=false
+
+
+# ===============================
+# KEYCLOAK API SERVICE
+# ===============================
+keycloakverify.url = http://10.61.184.99:8200/auth/realms/iot-hp/protocol/openid-connect/token
+
+# ===============================
+# KEYCLOAK CONFIG
+# ===============================
+keycloak.realm=iot-hp
+# client_id
+keycloak.resource=iot-client
+keycloak.auth-server-url=http://10.61.184.99:8200/auth
+keycloak.ssl-required=none
+
+
+# ===============================
+# Cau hinh duong dan luu file
+# ===============================
+minio.baseUrl=http://10.60.117.198:9000
+minio.accessKey=minioadmin
+minio.secretKey=minioadmin
+minio.bucket=crm
+
+
+# ===============================
+# Cac tham so cau hinh cho ung dung
+# ===============================
+permission.ignore.url=/api/v1/healthz;

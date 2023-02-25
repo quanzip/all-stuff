@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/microapp?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true&failOverReadOnly=false&maxReconnects=50
+    username: root
+    password:
+  thymeleaf:
+    cache: false
+  messages:
+    basename: i18n
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  subconfig: em
+server:
+  port: 8084
+
+quanaqt:
+  name: Pham Hong Quanaqt
+  age: 25454
+  major: IT
+  isSent: true
+  enable: true
+
+quanzip:
+  name: Pham Hong Quanzip
+  age: 30047
+  major: IT1
+  enable: true
+
+em:
+  name: patosik
+  add: 200 lanlord street, Ontario, Canada
+anh:
+  name: patosik
+  add: 500 lanlord street, Ontario, USA
+
+
+#period: 500 years

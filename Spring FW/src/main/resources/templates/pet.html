@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Thymeleaf Variables</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h3>Welcome to see my pet, only official member are allowed to view this page</h3>
+<h2 th:text="${Mypet.normalName}">My pet nameL: </h2>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="sign out"/>
+</form>
+    <p><a th:href="@{/home}">Home</a></p>
+</body>
+</html>
